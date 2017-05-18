@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello world to IoT</title>
+    <script src="//cdn.pubnub.com/pubnub-3.14.5.js"></script>
+
+</head>
+<body>
+<button onclick="on()">ON</button>
+<button onclick="off()">OFF</button>
+
+<script>
+    var pubnub = PUBNUB.init({
+        subscribe_key: 'your subscribe key',
+        publish_key:   'your publish key'
+    });
+    function on(){
+        console.log('on');
+        pubnub.publish({
+            channel: 'channel-name',
+            message: {status: true}
+        });
+    }
+    function off(){
+        console.log('off');
+        pubnub.publish({
+            channel: 'channel-name',
+            message: {status: false}
+        });
+    }
+
+</script>
+</body>
+</html>

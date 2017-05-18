@@ -1,0 +1,12 @@
+{
+  "name": "c",
+  "version": "1.0.0",
+  "description": "first jhonyfive project",
+  "main": "index.js",
+  "author": "umair",
+  "license": "ISC",
+  "dependencies": {
+    "johnny-five": "^0.10.8",
+    "pubnub": "^3.15.2"
+  }
+}
